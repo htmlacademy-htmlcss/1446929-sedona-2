@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+ }
+
+ @font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+ }
+
+ body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+ }
+
+ /* Общее */
+
+ .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.lead-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.lead-title-light {
+  color:#FFFFFF;
+}
+
+.lead-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.lead-subtitle-light {
+  color:#FFFFFF;
+}
+
+/* Навигация */
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+/* Hero */
+.hero {
+  background-color: #82B3D3;
+  background-image: url("../images/hero/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* Преимущества и Услуги */
+.advantages-list,
+.services {
+  list-style: none;
+}
+
+.advantages-title,
+.services-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-text,
+.services-text {
+  line-height: 21px;
+  color: #333333;
+}
+
+/* Поиск */
+
+.search-btn {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-align: center;
+}
+
+/* Блок подписки */
+
+.subscribe {
+  background-color: #82B3D3;
+  background-image: url("../images/subscribe/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.subscribe-label {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.subscribe-btn {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #82B3D3;
+}
+
+
+/* Подвал сайта */
+
+.footer-phone {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Страница каталога */
+
+.catalog-filter {
+  background-color: #82B3D3;
+  background-image: url("../images/filter/filter.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+.catalog-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.filter-caption {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.filter-label {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.price-input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+}
+
+.btn {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: #82B3D3;
+
+}
+
+.btn-reset {
+  background-color: transparent;
+
+}
+
+.sort-result {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.select-control {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-list {
+  list-style: none;
+}
+
+.hotel-link {
+  text-decoration: none;
+}
+
+.hotel-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+}
+
+.hotel-info {
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-more-info {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #756157;
+  text-decoration: none;
+}
+
+
+.hotel-add {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-align: center;
+  border: none;
+}
+
+.hotel-favorite {
+  background-color: #7DB54F;
+}
+
+.hotel-rate {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #333333;
+
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-number {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+
+.pagination-number-active {
+  color: #000000;
+  background-color: #F2F2F2;
+}
