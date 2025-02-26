@@ -45,6 +45,8 @@
   font-display: swap;
  }
 
+
+
  body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
@@ -63,8 +65,7 @@
 }
 
 .wrapper {
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px var(--page-shadow);
   background-color: var(--basic-light);
@@ -78,6 +79,16 @@
   text-transform: uppercase;
   color: var(--basic-light);
   text-align: center;
+}
+
+.btn-submit {
+  background-color: var(--color-primary);
+
+}
+
+.btn-reset {
+  background-color: transparent;
+
 }
 
 .lead-title {
@@ -101,7 +112,8 @@
 }
 
 /* Навигация */
-.nav-list {
+.nav-list,
+.nav-user {
   list-style: none;
 }
 
@@ -113,6 +125,17 @@
   text-decoration: none;
 }
 
+.nav-user-favorite {
+  text-decoration: none;
+}
+
+.notification-badge {
+  font-family: inherit;
+  font-size: 10px;
+  color: var(--basic-light);
+  background-color: var(--color-accent);
+}
+
 .nav-btn {
   font-size: 16px;
   font-weight: 700;
@@ -120,7 +143,9 @@
   text-transform: uppercase;
   color: var(--basic-light);
   background-color: var(--btn-primary);
+  text-decoration: none;
 }
+
 
 /* Hero */
 
@@ -130,14 +155,13 @@
   background-repeat: no-repeat no-repeat;
   background-position: bottom center;
   background-size: contain cover;
-  height: 485px;
+  padding: 51px 0 82px;
 }
 
 .hero-inscription {
   display: block;
   width: 458px;
   margin: 0 auto;
-  padding-top: 51px;
 }
 
 /* Преимущества и Услуги */
@@ -194,6 +218,10 @@
   opacity: 0.6;
 }
 
+.subscribe-input {
+  font-family: inherit;
+}
+
 .subscribe-btn {
   font-family: inherit;
   font-size: 20px;
@@ -233,6 +261,12 @@
 
 }
 
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .breadcrumbs-item {
   font-size: 16px;
   font-weight: 400;
@@ -259,15 +293,7 @@
   color: var(--basic-dark);
 }
 
-.btn-submit {
-  background-color: var(--color-primary);
 
-}
-
-.btn-reset {
-  background-color: transparent;
-
-}
 
 .sort-result {
   font-size: 30px;

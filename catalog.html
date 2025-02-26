@@ -24,20 +24,20 @@
             <a class="nav-link" aria-current="page">Гостиницы</a>
           </li>
         </ul>
-        <ul class="nav-list nav-user">
-          <li class="nav-item">
-            <a class="nav-link nav-link-search" href="#">
+        <ul class="nav-user">
+          <li class="nav-user-item">
+            <a class="nav-user-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-favorite" href="#">
+          <li class="nav-user-item">
+            <a class="nav-user-favorite" href="#">
               <span class="visually-hidden">Гостиницы добавлены в избранное</span>
               <span class="notification-badge">12</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-btn" href="#">Хочу сюда!</a>
+          <li class="nav-user-item">
+            <a class="nav-btn" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -45,12 +45,18 @@
 
     <main class="catalog">
 
-      <section class="catalog-filter">
+      <div class="catalog-filter">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
-        <div class="breadcrumbs">
-          <a href="index.html"><span class="visually-hidden">Главная</span></a>
-          <a class="breadcrumbs-item breadcrumbs-item-active" aria-current="page">Гостиницы</a>
-        </div>
+
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a href="index.html"><span class="visually-hidden">Главная</span></a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page">Гостиницы</a>
+          </li>
+        </ul>
+
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter-area">
             <legend class="filter-caption">Инфраструктура:</legend>
@@ -101,7 +107,7 @@
             <button class="btn btn-reset" type="reset">Сбросить</button>
           </div>
         </form>
-      </section>
+      </div>
 
       <section class="catalog-sort">
         <h2 class="sort-result">Найдено гостиниц: 38</h2>
@@ -133,7 +139,11 @@
             </div>
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
-            <p class="hotel-rate">Рейтинг: 8,5</p>
+            <div class="hotel-rate">
+              <p class="hotel-rate-star"><span class="visually-hidden">4 звезды из 5</span></p>
+              <p class="hotel-rate-number">Рейтинг: 8,5</p>
+            </div>
+
           </li>
           <li class="hotel-card">
             <a class="hotel-link" href="#" tabindex="-1">
@@ -148,7 +158,10 @@
             </div>
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add hotel-favorite btn" type="button">В избранном</button>
-            <p class="hotel-rate">Рейтинг: 9,2</p>
+            <div class="hotel-rate">
+              <p class="hotel-rate-star"><span class="visually-hidden">4 звезды из 5</span></p>
+              <p class="hotel-rate-number">Рейтинг: 9,2</p>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-link" href="#" tabindex="-1">
@@ -163,7 +176,10 @@
             </div>
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
-            <p class="hotel-rate">Рейтинг: 6,9</p>
+            <div class="hotel-rate">
+              <p class="hotel-rate-star"><span class="visually-hidden">3 звезды из 5</span></p>
+              <p class="hotel-rate-number">Рейтинг: 6,9</p>
+            </div>
           </li>
           <li class="hotel-card">
             <a class="hotel-link" href="#" tabindex="-1">
@@ -178,7 +194,10 @@
             </div>
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
-            <p class="hotel-rate">Рейтинг: 5,0</p>
+            <div class="hotel-rate">
+              <p class="hotel-rate-star"><span class="visually-hidden">2 звезды из 5</span></p>
+              <p class="hotel-rate-number">Рейтинг: 5,0</p>
+            </div>
           </li>
         </ul>
 
