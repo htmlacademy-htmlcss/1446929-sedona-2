@@ -58,8 +58,7 @@
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-wide">
               <div class="advantages-wrapper advantages-wrapper-wide">
-                <h3 class="advantages-title">Настоящий городок</h3>
-                <div class="horizontal-divider horizontal-divider-light"></div>
+                <h3 class="advantages-title advantages-title-light">Настоящий городок</h3>
                 <p class="advantages-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img src="images/advantages/advantages-1.jpg" width="800" height="385" alt="Живописные здания на фоне гор.">
@@ -67,28 +66,24 @@
             <li class="advantages-item">
               <div class="advantages-wrapper">
                 <h3 class="advantages-title">Небольшая площадь</h3>
-                <div class="horizontal-divider"></div>
                 <p class="advantages-text">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-wrapper">
                 <h3 class="advantages-title">Красивая<br>дорога</h3>
-                <div class="horizontal-divider"></div>
                 <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-wrapper">
                 <h3 class="advantages-title">Мало<br>туристов</h3>
-                <div class="horizontal-divider"></div>
                 <p class="advantages-text">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-wide">
               <div class="advantages-wrapper advantages-wrapper-wide">
-                <h3 class="advantages-title">Там есть мост дьявола</h3>
-                <div class="horizontal-divider horizontal-divider-light"></div>
+                <h3 class="advantages-title advantages-title-light">Там есть мост дьявола</h3>
                 <p class="advantages-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img src="images/advantages/advantages-2.jpg" width="800" height="385" alt="Мост дьявола.">
@@ -147,19 +142,16 @@
           <li class="socials-item">
             <a class="socials-link socials-link-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в ВКонтакте</span>
-              <img src="images/socials/social-vk.svg" alt="ВКонтакте" width="24" height="14">
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Мы в Телеграм</span>
-              <img src="images/socials/social-telegram.svg" alt="Телеграм" width="18" height="16">
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Мы в YouTube</span>
-              <img src="images/socials/social-youtube.svg" alt="YouTube" width="22" height="17">
             </a>
           </li>
         </ul>
@@ -169,11 +161,40 @@
         </address>
 
         <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="developer-img" src="images/developer.svg" width="115" height="33" alt="Логотип разработчика HTML Academy.">
+          <span class="visually-hidden">Логотип разработчика HTML Academy</span>
         </a>
       </footer>
     </div>
 
+    <!-- Modal -->
+
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <button class="modal-close-btn">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+            <label for="sign-in-date">Дата заезда:</label>
+            <input class="modal-input-date modal-input-sign-in" type="text" id="sign-in-date" name="sign-in-date" value="27 апреля 2020" required>
+            <p class="modal-comment modal-comment-error">Мы не можем отправить вас в прошлое.</p>
+
+            <label for="sign-out-date">Дата выезда:</label>
+            <input class="modal-input-date modal-input-sign-out" type="text" id="sign-out-date" name="sign-out-date" value="1 сентября 2021" required>
+            <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
+
+            <label for="adults">Взрослые:</label>
+            <input class="modal-quantity input-quantity-adults" type="text" id="adults" name="adults" value="2" required>
+
+            <label for="children">Дети:</label>
+            <input class="modal-quantity input-quantity-children" type="text" id="children" name="children" value="2" required>
+
+            <a class="modal-search-btn" href="#">Найти</a>
+          </form>
+        </section>
+      </div>
+    </div>
 
   </body>
 </html>

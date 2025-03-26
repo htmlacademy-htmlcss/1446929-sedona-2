@@ -50,44 +50,34 @@
           <h1 class="catalog-title">Гостиницы Седоны</h1>
 
           <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
-              <a href="index.html"><span class="visually-hidden">Главная</span></a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link breadcrumbs-link-current" aria-current="page">Гостиницы</a>
-            </li>
+            <li class="breadcrumbs-item"><a class="breadcrumbs-link breadcrumbs-link-main" href="index.html"><span class="visually-hidden">Главная</span></a></li>
+            <li class="breadcrumbs-item"><a class="breadcrumbs-link breadcrumbs-link-current" href="#">Гостиницы</a></li>
           </ul>
 
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-area">
               <legend class="filter-caption">Инфраструктура:</legend>
               <p>
-                <input class="filter-input" type="checkbox" id="swimming-pool" name="infrastructure" value="бассейн" checked>
-                <label class="filter-label" for="swimming-pool">Бассейн</label>
+                <input class="filter-input filter-input-checkbox" type="checkbox" id="swimming-pool" name="infrastructure" value="бассейн" checked><label class="filter-label" for="swimming-pool">Бассейн</label>
               </p>
               <p>
-                <input class="filter-input" type="checkbox" id="parking" name="infrastructure" value="парковка" checked>
-                <label class="filter-label" for="parking">Парковка</label>
+                <input class="filter-input filter-input-checkbox" type="checkbox" id="parking" name="infrastructure" value="парковка" checked><label class="filter-label" for="parking">Парковка</label>
               </p>
               <p>
-                <input class="filter-input" type="checkbox" id="wi-fi" name="infrastructure" value="wi-fi">
-                <label class="filter-label" for="wi-fi">Wi-Fi</label>
+                <input class="filter-input filter-input-checkbox" type="checkbox" id="wi-fi" name="infrastructure" value="wi-fi"><label class="filter-label" for="wi-fi">Wi-Fi</label>
               </p>
             </fieldset>
 
             <fieldset class="filter-area">
               <legend class="filter-caption">Тип жилья:</legend>
               <p>
-                <input class="filter-input" type="radio" id="hotel" name="lodging-type" value="гостиница" checked>
-                <label class="filter-label" for="hotel">Гостиница</label>
+                <input class="filter-input filter-input-radio" type="radio" id="hotel" name="lodging-type" value="гостиница" checked><label class="filter-label" for="hotel">Гостиница</label>
               </p>
               <p>
-                <input class="filter-input" type="radio" id="motel" name="lodging-type" value="мотель">
-                <label class="filter-label" for="motel">Мотель</label>
+                <input class="filter-input filter-input-radio" type="radio" id="motel" name="lodging-type" value="мотель"><label class="filter-label" for="motel">Мотель</label>
               </p>
               <p>
-                <input class="filter-input" type="radio" id="apartment" name="lodging-type" value="апартаменты">
-                <label class="filter-label" for="apartment">Апартаменты</label>
+                <input class="filter-input filter-input-radio" type="radio" id="apartment" name="lodging-type" value="апартаменты"><label class="filter-label" for="apartment">Апартаменты</label>
               </p>
             </fieldset>
 
@@ -99,6 +89,13 @@
 
                   <input class="price-input price-input-max" id="max-price" type="number" name="max-price" value="9000">
                   <label class="max-price" for="max-price">до</label>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
             </fieldset>
 
@@ -113,15 +110,17 @@
       <section class="hotels inner-container">
         <div class="catalog-sort">
           <h2 class="sort-result">Найдено гостиниц: 38</h2>
-          <select class="select-control" name="hotel-search" aria-label="Сортировка">
-            <option value="cheap" selected>Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
-          </select>
+          <div class="select-wrap">
+            <select class="select-control" name="hotel-search" aria-label="Сортировка">
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+          </div>
           <div class="sort-view">
-            <a href="catalog.html?view=tile" aria-current="page"><span class="visually-hidden">Плитка</span></a>
-            <a href="catalog.html?view=card"><span class="visually-hidden">Карточка</span></a>
-            <a href="catalog.html?view=list"><span class="visually-hidden">Список</span></a>
+            <a class="sort-view-icon sort-view-icon-current sort-view-tile" href="catalog.html?view=tile"><span class="visually-hidden">Плитка</span></a>
+            <a class="sort-view-icon sort-view-card" href="catalog.html?view=card"><span class="visually-hidden">Карточка</span></a>
+            <a class="sort-view-icon sort-view-list" href="catalog.html?view=list"><span class="visually-hidden">Список</span></a>
           </div>
         </div>
         <ul class="hotel-list">
@@ -139,7 +138,7 @@
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
 
-            <div class="hotel-rate hotel-rate-star star-4" role="img" aria-label="4 звезды"></div>
+            <p class="hotel-rate hotel-rate-star star-4"><span class="visually-hidden">4 звезды из 5</span></p>
             <p class="hotel-rate hotel-rate-number">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card">
@@ -156,7 +155,7 @@
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add hotel-favorite btn" type="button">В избранном</button>
 
-            <div class="hotel-rate hotel-rate-star star-4" role="img" aria-label="4 звезды"></div>
+            <p class="hotel-rate hotel-rate-star star-4"><span class="visually-hidden">4 звезды из 5</span></p>
             <p class="hotel-rate hotel-rate-number">Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card">
@@ -173,7 +172,7 @@
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
 
-            <div class="hotel-rate hotel-rate-star star-3" role="img" aria-label="3 звезды"></div>
+            <p class="hotel-rate hotel-rate-star star-3"><span class="visually-hidden">3 звезды из 5</span></p>
             <p class="hotel-rate hotel-rate-number">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card">
@@ -190,7 +189,7 @@
             <a class="hotel-more-info btn" href="#">Подробнее</a>
             <button class="hotel-add btn" type="button">В избранное</button>
 
-            <div class="hotel-rate hotel-rate-star star-2" role="img" aria-label="2 звезды"></div>
+            <p class="hotel-rate hotel-rate-star star-2"><span class="visually-hidden">2 звезды из 5</span></p>
             <p class="hotel-rate hotel-rate-number">Рейтинг: 5,0</p>
           </li>
         </ul>
@@ -235,19 +234,16 @@
         <li class="socials-item">
           <a class="socials-link socials-link-vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в ВКонтакте</span>
-            <img src="images/socials/social-vk.svg" alt="ВКонтакте" width="24" height="14">
           </a>
         </li>
         <li class="socials-item">
           <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Мы в Телеграм</span>
-            <img src="images/socials/social-telegram.svg" alt="Телеграм" width="18" height="16">
           </a>
         </li>
         <li class="socials-item">
           <a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Мы в YouTube</span>
-            <img src="images/socials/social-youtube.svg" alt="YouTube" width="22" height="17">
           </a>
         </li>
       </ul>
@@ -257,7 +253,7 @@
       </address>
 
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="developer-img" src="images/developer.svg" width="115" height="33" alt="Логотип разработчика HTML Academy.">
+        <span class="visually-hidden">Логотип разработчика HTML Academy</span>
       </a>
     </footer>
   </div>
