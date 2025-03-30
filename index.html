@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicons/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -161,40 +163,56 @@
         </address>
 
         <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">Логотип разработчика HTML Academy</span>
+          <span class="visually-hidden">Разработчик сайта</span>
         </a>
       </footer>
     </div>
 
     <!-- Modal -->
 
-    <div class="modal-container">
-      <div class="modal modal-search">
-        <button class="modal-close-btn">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <section class="modal-content">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
-            <label for="sign-in-date">Дата заезда:</label>
-            <input class="modal-input-date modal-input-sign-in" type="text" id="sign-in-date" name="sign-in-date" value="27 апреля 2020" required>
-            <p class="modal-comment modal-comment-error">Мы не можем отправить вас в прошлое.</p>
+    <dialog aria-label="modal">
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+          <label for="sign-in-date">Дата заезда:</label>
+          <input class="modal-input-date modal-input-sign-in" type="text" id="sign-in-date" name="sign-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
 
-            <label for="sign-out-date">Дата выезда:</label>
-            <input class="modal-input-date modal-input-sign-out" type="text" id="sign-out-date" name="sign-out-date" value="1 сентября 2021" required>
-            <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
+          <p class="modal-comment modal-comment-error">Мы не можем отправить вас в прошлое.</p>
 
-            <label for="adults">Взрослые:</label>
-            <input class="modal-quantity input-quantity-adults" type="text" id="adults" name="adults" value="2" required>
+          <label for="sign-out-date">Дата выезда:</label>
+          <input class="modal-input-date modal-input-sign-out" type="text" id="sign-out-date" name="sign-out-date" value="1 сентября 2021" placeholder="1 сентября 2021" required>
+          <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
 
-            <label for="children">Дети:</label>
-            <input class="modal-quantity input-quantity-children" type="text" id="children" name="children" value="2" required>
+          <label for="adults">Взрослые:</label>
+          <div class="counter counter-adults">
+            <button class="counter-btn counter-btn-decrement" type="button"></button>
+            <input class="input-quantity" type="number" id="adults" name="adults" value="2" placeholder="2" required>
+            <button class="counter-btn counter-btn-increment" type="button"></button>
+          </div>
 
-            <a class="modal-search-btn" href="#">Найти</a>
-          </form>
-        </section>
-      </div>
-    </div>
+          <span class="label-children">
+            <label class="label-children" for="children">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-trigger" type="button" aria-labelledby="tooltip-label-date">
+                <span class="visually-hidden">Дополнительная информация</span>
+              </button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </span>
 
+          <div class="counter counter-children">
+            <button class="counter-btn counter-btn-decrement" type="button"></button>
+            <input class="input-quantity" type="number" id="children" name="children" value="2" placeholder="2" required>
+            <button class="counter-btn counter-btn-increment" type="button"></button>
+          </div>
+
+          <a class="modal-search-btn" href="#">Найти</a>
+        </form>
+      </section>
+      <button class="modal-close-btn">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </dialog>
+  <script src="js/script.js"></script>
   </body>
 </html>
