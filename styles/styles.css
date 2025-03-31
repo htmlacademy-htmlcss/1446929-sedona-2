@@ -212,7 +212,7 @@ input[type="number"] {
 
 .header {
   display: flex;
-  gap: 30px;
+  gap: 45px;
 }
 
 .logo {
@@ -471,6 +471,7 @@ input[type="number"] {
 
 .advantages-text,
 .services-text {
+  margin: 0;
   font-size: 18px;
   line-height: 1.16;
   color: var(--text-secondary);
@@ -523,6 +524,7 @@ input[type="number"] {
   align-items: center;
   justify-items: center;
   padding: 81px 85px;
+  gap: 30px;
 }
 
 .services-item:nth-child(2n + 1) {
