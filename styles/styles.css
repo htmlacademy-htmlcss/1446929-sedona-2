@@ -1320,7 +1320,7 @@ input[type="number"] {
 
 /* Модальное окно */
 
-dialog {
+.modal {
   width: 717px;
   padding: 64px 70px;
   background-color: var(--basic-light);
@@ -1330,7 +1330,7 @@ dialog {
   overflow-y: hidden;
 }
 
-dialog::backdrop {
+.modal::backdrop {
   background-color: var(--modal-overlay);
 }
 
