@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
-* Студент: [Наталья Ким](https://up.htmlacademy.ru/htmlcss-individual/2/user/1446929).
-* Наставник: `Неизвестно`.
+- Студент: [Наталья Ким](https://up.htmlacademy.ru/htmlcss-individual/2/user/1446929).
+- Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+- Сайт: [Проект Седона](https://natalya87324.github.io/1446929-sedona-2/).
 
 ---
 
