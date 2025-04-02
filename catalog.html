@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="page-container">
-    <header class="header inner-container">
+    <header class="header inner-container" data-test="header">
       <a class="logo" href="index.html">
         <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип с текстом 'City of Sedona', скалы на голубом фоне.">
       </a>
@@ -29,12 +29,12 @@
         <ul class="nav-user">
           <li class="nav-user-item">
             <a class="nav-user-link nav-user-search" href="#">
-              <span class="visually-hidden">Поиск</span>
+              <span class="visually-hidden">Поиск.</span>
             </a>
           </li>
           <li class="nav-user-item">
             <a class="nav-user-link nav-user-favorite" href="#">
-              <span class="visually-hidden">Гостиницы добавлены в избранное</span>
+              <span class="visually-hidden">Гостиницы добавлены в избранное.</span>
               <span class="notification-badge">12</span>
             </a>
           </li>
@@ -45,7 +45,7 @@
       </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main-container" data-test="main">
       <div class="catalog-filter">
 
         <div class="inner-container">
@@ -56,18 +56,18 @@
             <li class="breadcrumbs-item"><a class="breadcrumbs-link breadcrumbs-link-current" href="#">Гостиницы</a></li>
           </ul>
 
-          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get" data-test="filter">
             <fieldset class="filter-area">
               <legend class="filter-caption">Инфраструктура:</legend>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-checkbox" type="checkbox" id="swimming-pool" name="infrastructure" value="бассейн" checked>
                 <label class="filter-label" for="swimming-pool">Бассейн</label>
               </p>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-checkbox" type="checkbox" id="parking" name="infrastructure" value="парковка" checked>
                 <label class="filter-label" for="parking">Парковка</label>
               </p>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-checkbox" type="checkbox" id="wi-fi" name="infrastructure" value="wi-fi">
                 <label class="filter-label" for="wi-fi">Wi-Fi</label>
               </p>
@@ -75,13 +75,13 @@
 
             <fieldset class="filter-area">
               <legend class="filter-caption">Тип жилья:</legend>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-radio" type="radio" id="hotel" name="lodging-type" value="гостиница" checked><label class="filter-label" for="hotel">Гостиница</label>
               </p>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-radio" type="radio" id="motel" name="lodging-type" value="мотель"><label class="filter-label" for="motel">Мотель</label>
               </p>
-              <p>
+              <p class="filter-item">
                 <input class="filter-input filter-input-radio" type="radio" id="apartment" name="lodging-type" value="апартаменты"><label class="filter-label" for="apartment">Апартаменты</label>
               </p>
             </fieldset>
@@ -89,18 +89,18 @@
             <fieldset class="filter-area filter-area-price">
               <legend class="filter-caption">Стоимость, &#8381;</legend>
                 <div class="price-controls">
-                  <input class="price-input price-input-min" id="min-price" type="number" name="min-price" value="0">
+                  <input class="price-input price-input-min" id="min-price" type="number" name="min-price" value="0" placeholder="0">
                   <label class="min-price" for="min-price">от</label>
 
-                  <input class="price-input price-input-max" id="max-price" type="number" name="max-price" value="9000">
+                  <input class="price-input price-input-max" id="max-price" type="number" name="max-price" value="9000" placeholder="9000">
                   <label class="max-price" for="max-price">до</label>
                 </div>
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <button class="toggle toggle-min" type="button"><span class="visually-hidden">Изменить минимальную цену.</span></button>
+                  <button class="toggle toggle-max" type="button"><span class="visually-hidden">Изменить максимальную цену.</span></button>
                 </div>
             </fieldset>
 
@@ -112,7 +112,7 @@
         </div>
       </div>
 
-      <section class="hotels inner-container">
+      <section class="hotels inner-container" data-test="catalog">
         <div class="catalog-sort">
           <h2 class="sort-result">Найдено гостиниц: 38</h2>
           <div class="select-wrap">
@@ -123,9 +123,9 @@
             </select>
           </div>
           <div class="sort-view">
-            <a class="sort-view-icon sort-view-icon-current sort-view-tile" href="catalog.html?view=tile"><span class="visually-hidden">Плитка</span></a>
-            <a class="sort-view-icon sort-view-card" href="catalog.html?view=card"><span class="visually-hidden">Карточка</span></a>
-            <a class="sort-view-icon sort-view-list" href="catalog.html?view=list"><span class="visually-hidden">Список</span></a>
+            <a class="sort-view-icon sort-view-icon-current sort-view-tile" href="catalog.html?view=tile"><span class="visually-hidden">Плитка.</span></a>
+            <a class="sort-view-icon sort-view-card" href="catalog.html?view=card"><span class="visually-hidden">Карточка.</span></a>
+            <a class="sort-view-icon sort-view-list" href="catalog.html?view=list"><span class="visually-hidden">Список.</span></a>
           </div>
         </div>
         <ul class="hotel-list">
@@ -221,34 +221,35 @@
         </ul>
       </section>
 
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <div class="inner-wrapper">
           <h2 class="visually-hidden">Хотите узнать больше?</h2>
           <p class="lead-title">Подпишитесь на рассылку</p>
-          <p class="lead-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <p class="lead-subtitle">Только полезная информация и&nbsp;никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscribe-input" type="email" name="user-email" placeholder="Ваш e-mail" required>
+            <label class="visually-hidden" for="user-email">Ваш e-mail</label>
+            <input class="subscribe-input" type="email" id="user-email" name="user-email" placeholder="Ваш e-mail" required>
             <button class="subscribe-btn" type="submit">Подписаться</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer inner-container" >
+    <footer class="footer inner-container" data-test="footer">
       <ul class="socials">
         <li class="socials-item">
           <a class="socials-link socials-link-vk" href="https://vk.com/htmlacademy">
-            <span class="visually-hidden">Мы в ВКонтакте</span>
+            <span class="visually-hidden">Мы в ВКонтакте.</span>
           </a>
         </li>
         <li class="socials-item">
           <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Мы в Телеграм</span>
+            <span class="visually-hidden">Мы в Телеграм.</span>
           </a>
         </li>
         <li class="socials-item">
           <a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="visually-hidden">Мы в YouTube</span>
+            <span class="visually-hidden">Мы в YouTube.</span>
           </a>
         </li>
       </ul>
@@ -258,7 +259,7 @@
       </address>
 
       <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-        <span class="visually-hidden">Разработчик сайта</span>
+        <span class="visually-hidden">Разработчик сайта.</span>
       </a>
     </footer>
   </div>

@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="header inner-container">
+      <header class="header inner-container" data-test="header">
         <a class="logo">
           <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип с текстом 'City of Sedona', скалы на голубом фоне.">
         </a>
@@ -29,12 +29,12 @@
           <ul class="nav-user">
             <li class="nav-user-item">
               <a class="nav-user-link nav-user-search" href="#">
-                <span class="visually-hidden">Поиск</span>
+                <span class="visually-hidden">Поиск.</span>
               </a>
             </li>
             <li class="nav-user-item">
               <a class="nav-user-link nav-user-favorite" href="#">
-                <span class="visually-hidden">Гостиницы добавлены в избранное</span>
+                <span class="visually-hidden">Гостиницы добавлены в избранное.</span>
                 <span class="notification-badge">12</span>
               </a>
             </li>
@@ -45,13 +45,13 @@
         </nav>
       </header>
 
-      <main class="main-container">
-        <section class="hero">
+      <main class="main-container" data-test="main">
+        <section class="hero" data-test="hero">
           <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
           <img class="hero-inscription" src="images/hero/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
         </section>
 
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
           <div class="inner-wrapper">
             <h2 class="visually-hidden">Преимущества Седоны</h2>
             <p class="lead-title lead-title-advantages">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
@@ -73,19 +73,19 @@
             </li>
             <li class="advantages-item">
               <div class="advantages-wrapper">
-                <h3 class="advantages-title">Красивая<br>дорога</h3>
+                <h3 class="advantages-title">Красивая<br> дорога</h3>
                 <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-wrapper">
-                <h3 class="advantages-title">Мало<br>туристов</h3>
+                <h3 class="advantages-title">Мало<br> туристов</h3>
                 <p class="advantages-text">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
-            <li class="advantages-item advantages-item-wide">
+            <li class="advantages-item advantages-item-wide advantages-item-reverse">
               <div class="advantages-wrapper advantages-wrapper-wide">
-                <h3 class="advantages-title advantages-title-light">Там есть<br>мост дьявола</h3>
+                <h3 class="advantages-title advantages-title-light">Там есть<br> мост дьявола</h3>
                 <p class="advantages-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img src="images/advantages/advantages-2.jpg" width="800" height="385" alt="Мост дьявола.">
@@ -93,7 +93,7 @@
           </ul>
         </section>
 
-        <section class="services">
+        <section class="services" data-test="service">
           <div class="inner-wrapper">
             <h2 class="visually-hidden">Услуги</h2>
             <p class="lead-title lead-title-services">Приезжайте в&nbsp;Седону отдохнуть<br> в&nbsp;комфорте и&nbsp;уюте!</p>
@@ -115,7 +115,7 @@
           </ul>
         </section>
 
-        <section class="search">
+        <section class="search" data-test="search">
           <div class="inner-wrapper">
             <h2 class="visually-hidden">Поможем подобрать гостиницу в Седоне.</h2>
             <p class="lead-title">Заинтересовались?</p>
@@ -124,7 +124,7 @@
           </div>
         </section>
 
-        <section class="subscribe subscribe-main">
+        <section class="subscribe subscribe-main" data-test="subscribe">
           <div class="inner-wrapper">
             <h2 class="visually-hidden">Хотите узнать больше?</h2>
             <p class="lead-title lead-title-light">Подпишитесь на рассылку</p>
@@ -139,21 +139,21 @@
 
       </main>
 
-      <footer class="footer inner-container">
+      <footer class="footer inner-container" data-test="footer">
         <ul class="socials">
           <li class="socials-item">
             <a class="socials-link socials-link-vk" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в ВКонтакте</span>
+              <span class="visually-hidden">Мы в ВКонтакте.</span>
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Мы в Телеграм</span>
+              <span class="visually-hidden">Мы в Телеграм.</span>
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">Мы в YouTube</span>
+              <span class="visually-hidden">Мы в YouTube.</span>
             </a>
           </li>
         </ul>
@@ -163,7 +163,7 @@
         </address>
 
         <a class="developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">Разработчик сайта</span>
+          <span class="visually-hidden">Разработчик сайта.</span>
         </a>
       </footer>
     </div>
@@ -185,32 +185,32 @@
 
           <label for="adults">Взрослые:</label>
           <div class="counter counter-adults">
-            <button class="counter-btn counter-btn-decrement" type="button"></button>
+            <button class="counter-btn counter-btn-decrement" type="button"><span class="visually-hidden">Уменьшить количество взрослых.</span></button>
             <input class="input-quantity" type="number" id="adults" name="adults" value="2" placeholder="2" required>
-            <button class="counter-btn counter-btn-increment" type="button"></button>
+            <button class="counter-btn counter-btn-increment" type="button"><span class="visually-hidden">Увеличить количество взрослых.</span></button>
           </div>
 
           <span class="label-children">
             <label class="label-children" for="children">Дети:</label>
             <span class="tooltip">
               <button class="tooltip-trigger" type="button" aria-labelledby="tooltip-label-date">
-                <span class="visually-hidden">Дополнительная информация</span>
+                <span class="visually-hidden">Дополнительная информация.</span>
               </button>
               <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </span>
           </span>
 
           <div class="counter counter-children">
-            <button class="counter-btn counter-btn-decrement" type="button"></button>
+            <button class="counter-btn counter-btn-decrement" type="button"><span class="visually-hidden">Уменьшить количество детей.</span></button>
             <input class="input-quantity" type="number" id="children" name="children" value="2" placeholder="2" required>
-            <button class="counter-btn counter-btn-increment" type="button"></button>
+            <button class="counter-btn counter-btn-increment" type="button"><span class="visually-hidden">Увеличить количество детей.</span></button>
           </div>
 
           <a class="modal-search-btn" href="#">Найти</a>
         </form>
       </section>
       <button class="modal-close-btn">
-        <span class="visually-hidden">Закрыть</span>
+        <span class="visually-hidden">Закрыть.</span>
       </button>
     </dialog>
   <script src="js/script.js"></script>
