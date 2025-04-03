@@ -11,7 +11,7 @@
   --text-secondary: #333333;
   --text-error: #ff5757;
   --icon-secondary: #83b3d3;
-  --socials-hover: #68A2CA;
+  --socials-hover: #68a2ca;
   --socials-active: rgba(104, 162, 202, 0.30);
   --page-shadow: rgba(0, 0, 0, 0.2);
   --modal-box-shadow: rgba(0, 0, 0, 0.15);
@@ -22,7 +22,7 @@
   --modal-overlay: rgba(242, 242, 242, 0.8);
   --brown-1: rgba(117, 97, 87, 0.3);
   --brown-2: #615048;
-  --green-1: #6C9E42;
+  --green-1: #6c9e42;
 }
 
 @font-face {
@@ -83,16 +83,6 @@ img {
   object-fit: contain;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    appearance: textfield;
-}
-
  /* Общее */
 
 .visually-hidden {
@@ -106,6 +96,19 @@ input[type="number"] {
 
 .inner-container {
   padding: 0 70px;
+}
+
+.input-quantity[type="number"]::-webkit-outer-spin-button,
+.input-quantity[type="number"]::-webkit-inner-spin-button,
+.price-input[type="number"]::-webkit-outer-spin-button,
+.price-input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.input-quantity[type="number"],
+.price-input[type="number"] {
+    appearance: textfield;
 }
 
 /* Кнопки */
@@ -236,7 +239,8 @@ input[type="number"] {
 }
 
 .nav-user {
-  align-items: center;
+  flex-shrink: 0;
+  margin-top: 14px;
 }
 
 .nav-link {
@@ -472,8 +476,6 @@ input[type="number"] {
   min-height: 385px;
 }
 
-
-
 .advantages-item-wide {
   grid-template-columns: 1fr 2fr;
   grid-column: 1 / -1;
@@ -498,7 +500,7 @@ input[type="number"] {
 }
 
 .advantages-wrapper {
-  max-width: 230px;
+  max-width: 235px;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -563,7 +565,7 @@ input[type="number"] {
 }
 
 .subscribe-main {
-  background-color: var(--color-primary);
+  background-color: var(--brown-2);
   background-image: url("../images/subscribe/subscribe.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -716,7 +718,7 @@ input[type="number"] {
 
 .catalog-filter {
   padding: 35px 0 70px;
-  background-color: var(--color-primary);
+  background-color: var(--brown-2);
   background-image: url("../images/filter/filter.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -912,6 +914,7 @@ input[type="number"] {
 }
 
 .price-controls label {
+  font-size: 18px;
   justify-self: end;
   padding: 0 20px;
   color: var(--basic-dark);
@@ -1014,12 +1017,12 @@ input[type="number"] {
 .catalog-sort {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 70px;
   padding: 50px 0 40px;
 }
 
 .sort-result {
+  max-width: 450px;
   margin: 0;
   font-size: 30px;
   font-weight: 700;
@@ -1073,9 +1076,11 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 220px;
 }
 
 .sort-view-icon {
+  flex-shrink: 0;
   display: block;
   position: relative;
   width: 48px;
@@ -1412,6 +1417,7 @@ input[type="number"] {
 .modal-input-sign-out {
   grid-column: 2 / -1;
   padding: 12px 20px;
+  width: 440px;
 }
 
 .modal-comment {
@@ -1425,7 +1431,7 @@ input[type="number"] {
 
 .modal-search-btn {
   grid-column: 1/ -1;
-  margin-top: 48px;
+  margin-top: 44px;
   padding: 18px 24px;
   font-family: inherit;
   font-size: 20px;
@@ -1449,7 +1455,7 @@ input[type="number"] {
 
 .modal-title {
   margin: 0;
-  margin-bottom: 64px;
+  margin-bottom: 66px;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
@@ -1483,7 +1489,6 @@ input[type="number"] {
   width: 110px;
   align-items: center;
   justify-content: center;
-
   min-height: 48px;
   background-color: var(--basic-light-grey);
   border-radius: 4px;
@@ -1562,9 +1567,10 @@ input[type="number"] {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 15px;
-  padding: 18px 22px;
+  margin-top: 14px;
+  padding: 20px 22px;
   width: 256px;
+  min-height: 143px;
   font-size: 16px;
   font-family: inherit;
   font-weight: 400;

@@ -11,7 +11,7 @@
   <body>
     <div class="page-container">
       <header class="header inner-container" data-test="header">
-        <a class="logo">
+        <a class="logo" href="index.html">
           <img class="logo-img" src="images/logo.svg" width="140" height="70" alt="Логотип с текстом 'City of Sedona', скалы на голубом фоне.">
         </a>
         <nav class="nav">
@@ -168,19 +168,16 @@
       </footer>
     </div>
 
-    <!-- Modal -->
-
     <dialog class="modal" aria-label="modal">
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="sign-in-date">Дата заезда:</label>
           <input class="modal-input-date modal-input-sign-in" type="text" id="sign-in-date" name="sign-in-date" value="27 апреля 2020" placeholder="27 апреля 2020" required>
-
           <p class="modal-comment modal-comment-error">Мы не можем отправить вас в прошлое.</p>
 
           <label for="sign-out-date">Дата выезда:</label>
-          <input class="modal-input-date modal-input-sign-out" type="text" id="sign-out-date" name="sign-out-date" value="1 сентября 2021" placeholder="1 сентября 2021" required>
+          <input class="modal-input-date modal-input-sign-out" type="text" id="sign-out-date" name="sign-out-date" value="1 сентября 2023" placeholder="1 сентября 2023" required>
           <p class="modal-comment">На эти даты есть свободные номера. Пока есть.</p>
 
           <label for="adults">Взрослые:</label>
@@ -213,6 +210,7 @@
         <span class="visually-hidden">Закрыть.</span>
       </button>
     </dialog>
+
   <script src="js/script.js"></script>
   </body>
 </html>
